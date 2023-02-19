@@ -27,6 +27,9 @@ class ChooseUsername extends StatelessWidget {
                     },
                     child: const Icon(Icons.arrow_back_ios_new_outlined)),
                 const SizedBox(height: 20),
+                 
+                const ProgressBarContainer(),
+
                 Text(
                   'Choose a username',
                   style: Styles.headLineStyle1,

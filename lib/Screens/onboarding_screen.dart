@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:oja_app/App_styles/app_styles.dart';
 import 'package:oja_app/Screens/Authentication/Create_account/accounts_signup.dart';
@@ -24,9 +25,27 @@ class OnboardingScreen extends StatelessWidget {
                   image: AssetImage('images/onboarding.png'),
                 ),
                 const SizedBox(height: 30),
-                Text(
-                  '    Discover market\nrecommended spots\n        near you.',
-                  style: Styles.headLineStyle1,
+                SizedBox(
+                  height: 95,
+                  child: AnimatedTextKit(
+                   
+                    pause: const Duration(milliseconds: 2000),
+                    repeatForever: true,
+                    animatedTexts: [
+                      TyperAnimatedText(
+                        '    Discover market\nrecommended spots\n          near you.',
+                        textStyle: Styles.headLineStyle1,
+                      ),
+                      TyperAnimatedText(
+                        '    Analyse and prepare a\n           valid budget.',
+                        textStyle: Styles.headLineStyle1,
+                      ),
+                      TyperAnimatedText(
+                        '     Track and monitor\n your market expenses.',
+                        textStyle: Styles.headLineStyle1,
+                      ),
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 30),
                 GestureDetector(
@@ -44,10 +63,8 @@ class OnboardingScreen extends StatelessWidget {
                 const SizedBox(height: 10),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginScreen()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
                   },
                   child: ButtonContainer(
                     text: 'Login',
@@ -55,9 +72,28 @@ class OnboardingScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30),
-                Text(
-                  'By tapping Create an account and using oja, you are to our\nTerms of use and Privacy statement',
-                  style: Styles.smallText,
+                RichText(
+                  textAlign: TextAlign.center,
+                  softWrap: true,
+                  text: TextSpan(
+                      text:
+                          'By tapping Create an account and using oja, you are to our\n ',
+                      style: Styles.smallText,
+                      children: [
+                        TextSpan(
+                            text: 'Terms of use',
+                            style: Styles.smallText
+                                .copyWith(fontWeight: FontWeight.bold)),
+                        TextSpan(
+                          text: ' and ',
+                          style: Styles.smallText,
+                        ),
+                        TextSpan(
+                            text: 'Privacy statement',
+                            //style: TextStyle(fontWeight: FontWeight.bold),
+                            style: Styles.smallText
+                                .copyWith(fontWeight: FontWeight.bold)),
+                      ]),
                 )
               ],
             ),
@@ -67,3 +103,7 @@ class OnboardingScreen extends StatelessWidget {
     );
   }
 }
+
+
+//'By tapping Create an account and using oja, you are to our\nTerms of use and Privacy statement',
+                  //style: Styles.smallText,

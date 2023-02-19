@@ -7,11 +7,17 @@ import 'package:oja_app/Screens/onboarding_screen.dart';
 import 'package:oja_app/Widgets/Button_containers/long_button_container.dart';
 import 'package:oja_app/Widgets/Social_media_signup/platforms_signin_container.dart';
 
-class AccountsSignup extends StatelessWidget {
+class AccountsSignup extends StatefulWidget {
   const AccountsSignup({super.key});
 
   @override
+  State<AccountsSignup> createState() => _AccountsSignupState();
+}
+
+class _AccountsSignupState extends State<AccountsSignup> {
+  @override
   Widget build(BuildContext context) {
+    Color activatedColor = Colors.orange;
     return Scaffold(
       body: ListView(
         children: [
@@ -87,7 +93,7 @@ class AccountsSignup extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LoginScreen()));
+                              builder: (context) =>  LoginScreen()));
                     },
                     child: Text(
                       'Already have an account? Log in',
@@ -102,6 +108,12 @@ class AccountsSignup extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget roundContainer() {
+  return Container(
+    decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.orange),
+  );
 }
 
 class ProgressBarContainer extends StatelessWidget {
