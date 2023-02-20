@@ -93,7 +93,7 @@ class _AccountsSignupState extends State<AccountsSignup> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>  LoginScreen()));
+                              builder: (context) => LoginScreen()));
                     },
                     child: Text(
                       'Already have an account? Log in',
@@ -113,6 +113,13 @@ class _AccountsSignupState extends State<AccountsSignup> {
 Widget roundContainer() {
   return Container(
     decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.orange),
+  );
+}
+
+Widget longContainer() {
+  return Container(
+    height: 5,
+    width: 75,
   );
 }
 
