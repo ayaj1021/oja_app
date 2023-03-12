@@ -6,6 +6,7 @@ import 'package:oja_app/Screens/onboarding_screen.dart';
 import 'package:oja_app/Widgets/Button_containers/long_button_container.dart';
 import 'package:oja_app/Widgets/Login_section_widgets/email_login.dart';
 import 'package:oja_app/Widgets/Login_section_widgets/password_login.dart';
+import 'package:oja_app/Widgets/k_textFormField.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({super.key, this.text});
@@ -64,47 +65,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(height: 40),
                   //Email address input field
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Email address',
-                        style: Styles.headLineStyle4,
-                      ),
-                      const SizedBox(height: 10),
-                      Container(
-                        // padding: const EdgeInsets.symmetric(horizontal: 10),
-                        // height: 56,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: const BoxDecoration(
-                            // borderRadius: BorderRadius.circular(40),
-                            // border: Border.all(color: Colors.grey.shade300),
-                            ),
-                        child: TextFormField(
-                          controller: textController,
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: const InputDecoration(
-                            border: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(40))),
-                            prefixIcon: Icon(Icons.mail_outline_rounded),
-                            hintText: 'example@gmail.com',
-                          ),
-                          validator: ((value) {
-                            if (value!.isEmpty) {
-                              return "Email can't be empty";
-                            }
-                            return null;
-                          }),
-                        ),
-                      ),
-                    ],
+                  K_textFormField(
+                    textController: textController,
+                    label: 'Email address',
+                    hintText: 'example@gmail.com',
                   ),
                   //End of email address input field
 
-                  // SignupLoginSection(
-                  //   controller: textController,
-                  // ),
                   const SizedBox(height: 30),
                   //Password input filed
                   Column(
