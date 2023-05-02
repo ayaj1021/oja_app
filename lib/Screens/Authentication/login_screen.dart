@@ -4,8 +4,7 @@ import 'package:oja_app/Screens/Authentication/Forgot_password/forgot_password.d
 import 'package:oja_app/Screens/Bottom_navigation_bar/bottom_nav_bar.dart';
 import 'package:oja_app/Screens/onboarding_screen.dart';
 import 'package:oja_app/Widgets/Button_containers/long_button_container.dart';
-import 'package:oja_app/Widgets/Login_section_widgets/email_login.dart';
-import 'package:oja_app/Widgets/Login_section_widgets/password_login.dart';
+
 import 'package:oja_app/Widgets/k_textFormField.dart';
 
 class LoginScreen extends StatefulWidget {
