@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:oja_app/App_styles/app_styles.dart';
 
 class SignupLoginSection extends StatelessWidget {
-  SignupLoginSection({
+const  SignupLoginSection({
     Key? key,
     required this.controller,
   }) : super(key: key);
 
   final TextEditingController controller;
-  final String _message = '';
+ // final String _message = '';
 
   @override
   Widget build(BuildContext context) {

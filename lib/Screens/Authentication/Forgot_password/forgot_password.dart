@@ -3,7 +3,6 @@ import 'package:oja_app/App_styles/app_styles.dart';
 import 'package:oja_app/Screens/Authentication/Forgot_password/reset_password.dart';
 import 'package:oja_app/Screens/Authentication/login_screen.dart';
 import 'package:oja_app/Widgets/Button_containers/long_button_container.dart';
-import 'package:oja_app/Widgets/Login_section_widgets/email_login.dart';
 
 class ForgotPassword extends StatelessWidget {
   ForgotPassword({super.key});
@@ -28,7 +27,7 @@ class ForgotPassword extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => LoginScreen()));
+                              builder: (context) => const LoginScreen()));
                     }),
                     icon: const Icon(Icons.arrow_back_ios_new_rounded),
                   ),

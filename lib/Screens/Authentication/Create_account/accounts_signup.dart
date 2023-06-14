@@ -17,7 +17,7 @@ class AccountsSignup extends StatefulWidget {
 class _AccountsSignupState extends State<AccountsSignup> {
   @override
   Widget build(BuildContext context) {
-    Color activatedColor = Colors.orange;
+  //  Color activatedColor = Colors.orange;
     return Scaffold(
       body: ListView(
         children: [
@@ -93,7 +93,7 @@ class _AccountsSignupState extends State<AccountsSignup> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => LoginScreen()));
+                              builder: (context) => const LoginScreen()));
                     },
                     child: Text(
                       'Already have an account? Log in',
@@ -112,12 +112,12 @@ class _AccountsSignupState extends State<AccountsSignup> {
 
 Widget roundContainer() {
   return Container(
-    decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.orange),
+    decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.orange),
   );
 }
 
 Widget longContainer() {
-  return Container(
+  return const SizedBox(
     height: 5,
     width: 75,
   );
@@ -134,7 +134,7 @@ class ProgressBarContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,

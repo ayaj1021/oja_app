@@ -8,7 +8,7 @@ import 'package:oja_app/Widgets/Login_section_widgets/password_login.dart';
 class ResetPassword extends StatelessWidget {
   ResetPassword({super.key});
 
-  TextEditingController passwordController = TextEditingController();
+ final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +55,7 @@ class ResetPassword extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => LoginScreen()));
+                        MaterialPageRoute(builder: (context) => const LoginScreen()));
                   },
                   child: LongButtonContainer(
                     text: 'Reset',

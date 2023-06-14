@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:oja_app/App_styles/app_styles.dart';
 import 'package:oja_app/Locations/Location_specific_details/redemption_details.dart';
 import 'package:oja_app/Locations/Location_specific_details/stateline_details.dart';
-import 'package:oja_app/Screens/Authentication/Mobile_number/mobile_number.dart';
 import 'package:oja_app/Screens/Bottom_navigation_bar/bottom_nav_bar.dart';
 import 'package:oja_app/Widgets/Sublocations/sublocation_container.dart';
 

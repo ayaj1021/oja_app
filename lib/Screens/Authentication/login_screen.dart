@@ -8,7 +8,7 @@ import 'package:oja_app/Widgets/Button_containers/long_button_container.dart';
 import 'package:oja_app/Widgets/k_textFormField.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({super.key, this.text});
+  const LoginScreen({super.key, this.text});
   final String? text;
 
   @override
@@ -21,7 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController textController = TextEditingController();
   TextEditingController pswdController = TextEditingController();
 
-  String _message = '';
+// final String _message = '';
   var obscureText = true;
   var isEmpty = true;
   final _formKey = GlobalKey<FormState>();

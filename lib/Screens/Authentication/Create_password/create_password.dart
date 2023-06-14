@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oja_app/App_styles/app_styles.dart';
 import 'package:oja_app/Screens/Authentication/Choose_username/choose_username.dart';
-import 'package:oja_app/Screens/Authentication/Create_account/accounts_signup.dart';
 import 'package:oja_app/Screens/Authentication/Mobile_number/mobile_number.dart';
 import 'package:oja_app/Widgets/Button_containers/long_button_container.dart';
 
